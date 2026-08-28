@@ -37,8 +37,6 @@ header {
         background 0.3s ease;
 }
 
-/* Header saat diminimalkan */
-
 header.minimized {
     padding: 8px 8%;
 
@@ -342,11 +340,16 @@ footer p {
     th,
     td {
         padding: 12px 8px;
-    header {
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
+    }
 
-header.minimized {
-    transform: translateY(-90%);
-}
+
+    /* ================= MOBILE NAVBAR ================= */
+
+    header {
+        transition: transform 0.3s ease;
+    }
+
+    header.minimized {
+        transform: translateY(-100%);
+    }
 }

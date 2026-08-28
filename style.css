@@ -79,18 +79,21 @@ nav h2 {
     margin-bottom: 15px;
 }
 
-.hero p {
+.hero-description {
     font-size: 20px;
     color: white;
-    margin-bottom: 30px;
 
-    background: rgba(0, 0, 0, 0.45);
-    padding: 12px 20px;
+    background: rgba(0, 0, 0, 0.55);
+
+    padding: 12px 22px;
     border-radius: 12px;
+
+    max-width: 650px;
+    margin: 0 auto 30px;
 
     backdrop-filter: blur(5px);
 
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .button {

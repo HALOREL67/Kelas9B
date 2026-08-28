@@ -17,15 +17,19 @@ body {
 }
 
 
-/* ================= HEADER ================= */
+/* ================= NAVBAR ================= */
 
-header {
+.navbar {
     position: sticky;
     top: 0;
-    background: rgba(8, 26, 51, 0.95);
-    backdrop-filter: blur(10px);
 
-    padding: 18px 8%;
+    width: 100%;
+
+    background: rgba(5, 20, 45, 0.95);
+
+    backdrop-filter: blur(12px);
+
+    padding: 20px 8%;
 
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
 
@@ -33,47 +37,82 @@ header {
 
     transition:
         padding 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.3s ease;
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-header.minimized {
-    padding: 8px 8%;
 
-    background: rgba(5, 15, 32, 0.97);
+/* Navbar saat di-scroll di HP */
+
+.navbar.minimized {
+    padding: 10px 8%;
+
+    background: rgba(3, 13, 30, 0.97);
 
     box-shadow:
-        0 4px 20px rgba(0, 0, 0, 0.35);
+        0 5px 20px rgba(0, 0, 0, 0.35);
 }
+
+
+.nav-container {
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* Logo */
+
+.logo {
+    text-decoration: none;
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    color: white;
+}
+
+.logo span {
+    color: #72b7ff;
+}
+
+
+/* Menu */
 
 nav {
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
+
+    gap: 35px;
 }
 
-nav h2 {
-    font-size: 25px;
-    color: white;
-}
-
-.menu {
-    display: flex;
-    gap: 25px;
-}
-
-.menu a {
+nav a {
     text-decoration: none;
-    color: white;
+
+    color: #e5efff;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
     transition: 0.2s;
 }
 
-.menu a:hover {
-    color: #60a5fa;
+nav a:hover {
+    color: #72b7ff;
 }
 
-
-/* ================= HERO ================= */
 
 /* ================= HERO ================= */
 
@@ -81,6 +120,7 @@ nav h2 {
     min-height: calc(100vh - 80px);
 
     display: flex;
+
     align-items: center;
 
     padding: 70px 8%;
@@ -90,25 +130,30 @@ nav h2 {
     background-image:
         linear-gradient(
             90deg,
-            rgba(3, 22, 55, 0.92),
-            rgba(8, 60, 150, 0.72)
+            rgba(3, 22, 55, 0.90),
+            rgba(8, 60, 150, 0.62)
         ),
         url("assets/foto-bareng.jpg");
 
     background-size: cover;
+
     background-position: center;
+
     background-repeat: no-repeat;
 
     color: white;
 }
 
+
 .hero-content {
     width: 100%;
+
     max-width: 1400px;
 
     margin: auto;
 
     display: grid;
+
     grid-template-columns: 1.2fr 0.8fr;
 
     align-items: center;
@@ -119,6 +164,24 @@ nav h2 {
 
 /* ================= HERO TEXT ================= */
 
+.hero-text {
+    max-width: 800px;
+}
+
+
+.hero-label {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    color: #bfdbfe;
+
+    margin-bottom: 18px;
+}
+
+
 .hero-text h1 {
     font-size: clamp(70px, 8vw, 130px);
 
@@ -128,17 +191,19 @@ nav h2 {
 
     letter-spacing: -4px;
 
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 
     color: white;
 }
+
 
 .hero-text h1 span {
     color: #72b7ff;
 }
 
-.hero-text > p {
-    max-width: 800px;
+
+.hero-description {
+    max-width: 750px;
 
     font-size: 21px;
 
@@ -147,16 +212,20 @@ nav h2 {
     color: #e5efff;
 
     margin-bottom: 40px;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 
-/* ================= BUTTON ================= */
+/* ================= HERO BUTTON ================= */
 
 .button {
     display: inline-flex;
 
     align-items: center;
-    gap: 20px;
+
+    justify-content: center;
 
     text-decoration: none;
 
@@ -164,26 +233,28 @@ nav h2 {
 
     color: #1464e8;
 
-    padding: 18px 30px;
+    padding: 17px 30px;
 
-    border-radius: 18px;
+    border-radius: 16px;
 
-    font-size: 20px;
+    font-size: 19px;
 
     font-weight: bold;
 
     transition: 0.25s;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
 }
 
-.button span {
-    font-size: 25px;
-}
 
 .button:hover {
     transform: translateY(-3px);
 
+    background: #e8f1ff;
+
     box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.25);
+        0 12px 30px rgba(0, 0, 0, 0.28);
 }
 
 
@@ -192,50 +263,62 @@ nav h2 {
 .hero-card {
     width: 100%;
 
-    padding: 48px;
+    padding: 45px;
 
-    background: rgba(70, 145, 235, 0.35);
+    background:
+        rgba(70, 145, 235, 0.35);
 
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border:
+        1px solid rgba(255, 255, 255, 0.3);
 
     border-radius: 35px;
 
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(14px);
 
     box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.2);
+        0 20px 50px rgba(0, 0, 0, 0.25);
 }
+
+
+/* Icon */
 
 .hero-icon {
     width: 100px;
+
     height: 100px;
 
     display: flex;
 
     justify-content: center;
+
     align-items: center;
 
-    background: rgba(255, 255, 255, 0.15);
+    background:
+        rgba(255, 255, 255, 0.15);
 
     border-radius: 25px;
 
     font-size: 48px;
 
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
+
+
+/* Card title */
 
 .hero-card h2 {
     text-align: left;
 
     font-size: 42px;
 
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 
     color: white;
 }
 
+
 .hero-subtitle {
-    font-size: 22px;
+    font-size: 21px;
 
     color: #e4efff;
 
@@ -243,96 +326,125 @@ nav h2 {
 }
 
 
-/* ================= INFO ================= */
+/* ================= CARD INFO ================= */
 
 .hero-info {
     width: 100%;
 }
 
+
 .info-row {
     display: flex;
 
     justify-content: space-between;
+
     align-items: center;
 
-    padding: 24px 5px;
+    gap: 20px;
+
+    padding: 22px 5px;
 
     border-bottom:
         1px solid rgba(255, 255, 255, 0.2);
 
-    font-size: 19px;
+    font-size: 18px;
 }
+
 
 .info-row:last-child {
     border-bottom: none;
 }
 
+
 .info-row span {
     color: white;
 }
 
+
 .info-row strong {
     color: white;
 
-    font-size: 20px;
+    font-size: 19px;
 
     text-align: right;
 }
 
 
-/* ================= BUTTON ================= */
-
-.button {
-    display: inline-block;
-
-    text-decoration: none;
-
-    background: #2563eb;
-    color: white;
-
-    padding: 13px 25px;
-
-    border-radius: 10px;
-
-    transition: 0.2s;
-}
-
-.button:hover {
-    background: #1d4ed8;
-    transform: translateY(-2px);
-}
-
-
-/* ================= SECTION ================= */
+/* ================= GENERAL SECTION ================= */
 
 section {
     padding: 80px 8%;
+
     background: #06152b;
 }
 
-/* Tentang Kelas */
+
+section h2 {
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    font-size: 32px;
+
+    color: white;
+}
+
+
+section > p {
+    max-width: 700px;
+
+    margin: auto;
+
+    text-align: center;
+
+    line-height: 1.7;
+
+    color: #dbeafe;
+}
+
+
+/* ================= TENTANG ================= */
+
 #tentang {
     background: #0b2142;
 }
 
-/* Struktur Kelas */
+
+/* ================= ANGGOTA / STRUKTUR ================= */
+
 #anggota {
     background: #0b2142;
 }
 
-section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 32px;
-    color: white;
+
+.structure-image {
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
 }
 
-section > p {
-    max-width: 700px;
-    margin: auto;
-    text-align: center;
-    line-height: 1.7;
-    color: #dbeafe;
+
+.structure-image img {
+    width: 100%;
+
+    max-width: 900px;
+
+    height: auto;
+
+    display: block;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -340,10 +452,14 @@ section > p {
 
 .cards {
     display: flex;
+
     justify-content: center;
+
     gap: 20px;
+
     flex-wrap: wrap;
 }
+
 
 .card {
     background: #102b50;
@@ -359,42 +475,49 @@ section > p {
     box-shadow:
         0 5px 20px rgba(0, 0, 0, 0.2);
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
 }
+
 
 .card p {
     margin-top: 10px;
+
     color: #cbd5e1;
 }
 
 
-/* ================= STRUCTURE IMAGE ================= */
+/* ================= PENGUMUMAN ================= */
 
-.structure-image {
-    width: 100%;
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.announcement-section {
+    background: #06152b;
 }
 
-.structure-image img {
-    width: 100%;
-    max-width: 900px;
 
-    height: auto;
+.announcement {
+    max-width: 800px;
 
-    display: block;
+    margin: auto;
 
-    margin: 0 auto;
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 30px;
+
+    background: #102b50;
 
     border-radius: 20px;
 
-    box-shadow:
-        0 10px 35px rgba(0, 0, 0, 0.35);
+    border:
+        1px solid rgba(255,255,255,0.08);
+}
+
+
+.announcement-icon {
+    font-size: 35px;
 }
 
 
@@ -402,6 +525,7 @@ section > p {
 
 table {
     width: 100%;
+
     max-width: 800px;
 
     margin: auto;
@@ -415,19 +539,24 @@ table {
     overflow: hidden;
 }
 
+
 th,
 td {
     padding: 15px;
 
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
 
     text-align: center;
 }
 
+
 th {
     background: #2563eb;
+
     color: white;
 }
+
 
 td {
     color: white;
@@ -441,128 +570,186 @@ footer {
 
     padding: 40px 20px;
 
-    background: #050f20;
+    background: #030d1e;
 
     color: white;
 }
 
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+
 footer p {
     color: #cbd5e1;
+
+    margin-top: 8px;
 }
 
 
 /* ================= MOBILE ================= */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
-    .menu {
-        gap: 10px;
+    /* ---------- NAVBAR ---------- */
 
-        font-size: 13px;
+    .navbar {
+        padding: 15px 20px;
+    }
+
+
+    .navbar.minimized {
+        transform: translateY(-110%);
+    }
+
+
+    .nav-container {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    .logo {
+        font-size: 26px;
+    }
+
+
+    nav {
+        gap: 15px;
 
         flex-wrap: wrap;
 
         justify-content: center;
     }
 
-.hero {
-    min-height: calc(100vh - 70px);
 
-    padding: 50px 20px;
-}
-
-.hero-content {
-    grid-template-columns: 1fr;
-
-    gap: 45px;
-}
-
-.hero-text h1 {
-    font-size: 65px;
-
-    letter-spacing: -2px;
-
-    margin-bottom: 30px;
-}
-
-.hero-text > p {
-    font-size: 17px;
-
-    line-height: 1.6;
-
-    margin-bottom: 30px;
-}
-
-.hero-card {
-    padding: 30px 25px;
-
-    border-radius: 28px;
-}
-
-.hero-icon {
-    width: 80px;
-    height: 80px;
-
-    font-size: 38px;
-
-    margin-bottom: 25px;
-}
-
-.hero-card h2 {
-    font-size: 32px;
-}
-
-.hero-subtitle {
-    font-size: 18px;
-}
-
-.info-row {
-    font-size: 15px;
-
-    padding: 19px 2px;
-}
-
-.info-row strong {
-    font-size: 16px;
-}
-
-.button {
-    font-size: 17px;
-
-    padding: 15px 23px;
-}
-
-    .hero h1 {
-        font-size: 35px;
+    nav a {
+        font-size: 13px;
     }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: calc(100vh - 70px);
+
+        padding: 50px 20px;
+    }
+
+
+    .hero-content {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+
+    .hero-label {
+        font-size: 14px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .hero-text h1 {
+        font-size: 65px;
+
+        letter-spacing: -2px;
+
+        margin-bottom: 30px;
+    }
+
 
     .hero-description {
+        font-size: 17px;
+
+        line-height: 1.6;
+
+        margin-bottom: 30px;
+    }
+
+
+    .button {
+        font-size: 17px;
+
+        padding: 15px 23px;
+    }
+
+
+    /* ---------- CARD ---------- */
+
+    .hero-card {
+        padding: 30px 25px;
+
+        border-radius: 28px;
+    }
+
+
+    .hero-icon {
+        width: 80px;
+
+        height: 80px;
+
+        font-size: 38px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .hero-card h2 {
+        font-size: 32px;
+    }
+
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+
+    .info-row {
+        font-size: 15px;
+
+        padding: 19px 2px;
+    }
+
+
+    .info-row strong {
         font-size: 16px;
-
-        padding: 10px 15px;
     }
 
-    nav {
-        flex-direction: column;
 
-        gap: 15px;
-    }
+    /* ---------- SECTION ---------- */
 
     section {
         padding: 60px 20px;
     }
 
+
     section h2 {
         font-size: 28px;
     }
+
+
+    /* ---------- STRUCTURE ---------- */
 
     .structure-image img {
         border-radius: 12px;
     }
 
+
+    /* ---------- TABLE ---------- */
+
     table {
         font-size: 14px;
     }
+
 
     th,
     td {
@@ -570,13 +757,11 @@ footer p {
     }
 
 
-    /* ================= MOBILE NAVBAR ================= */
+    /* ---------- ANNOUNCEMENT ---------- */
 
-    header {
-        transition: transform 0.3s ease;
-    }
+    .announcement {
+        padding: 25px;
 
-    header.minimized {
-        transform: translateY(-110%);
+        gap: 15px;
     }
 }

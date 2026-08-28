@@ -342,5 +342,12 @@ footer p {
     th,
     td {
         padding: 12px 8px;
-    }
+    header {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+header.minimized {
+    transform: translateY(-90%);
+    opacity: 0.15;
+}
 }

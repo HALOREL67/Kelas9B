@@ -12,7 +12,7 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background: #081a33;
+    background: #06152b;
     color: white;
 }
 
@@ -152,6 +152,17 @@ nav h2 {
 
 section {
     padding: 80px 8%;
+    background: #06152b;
+}
+
+/* Tentang Kelas */
+#tentang {
+    background: #0b2142;
+}
+
+/* Struktur Kelas */
+#anggota {
+    background: #0b2142;
 }
 
 section h2 {

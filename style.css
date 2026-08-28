@@ -75,23 +75,23 @@ nav h2 {
 
 /* ================= HERO ================= */
 
+/* ================= HERO ================= */
+
 .hero {
-    min-height: 90vh;
+    min-height: calc(100vh - 80px);
 
     display: flex;
-    justify-content: center;
     align-items: center;
 
-    text-align: center;
-
-    padding: 40px 20px;
+    padding: 70px 8%;
 
     position: relative;
 
     background-image:
         linear-gradient(
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.55)
+            90deg,
+            rgba(3, 22, 55, 0.92),
+            rgba(8, 60, 150, 0.72)
         ),
         url("assets/foto-bareng.jpg");
 
@@ -102,26 +102,181 @@ nav h2 {
     color: white;
 }
 
-.hero h1 {
-    font-size: 50px;
-    margin-bottom: 15px;
+.hero-content {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+
+    align-items: center;
+
+    gap: 80px;
 }
 
-.hero-description {
+
+/* ================= HERO TEXT ================= */
+
+.hero-text h1 {
+    font-size: clamp(70px, 8vw, 130px);
+
+    line-height: 0.85;
+
+    font-weight: 900;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 45px;
+
+    color: white;
+}
+
+.hero-text h1 span {
+    color: #72b7ff;
+}
+
+.hero-text > p {
+    max-width: 800px;
+
+    font-size: 21px;
+
+    line-height: 1.7;
+
+    color: #e5efff;
+
+    margin-bottom: 40px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.button {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 20px;
+
+    text-decoration: none;
+
+    background: white;
+
+    color: #1464e8;
+
+    padding: 18px 30px;
+
+    border-radius: 18px;
+
     font-size: 20px;
+
+    font-weight: bold;
+
+    transition: 0.25s;
+}
+
+.button span {
+    font-size: 25px;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ================= HERO CARD ================= */
+
+.hero-card {
+    width: 100%;
+
+    padding: 48px;
+
+    background: rgba(70, 145, 235, 0.35);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    border-radius: 35px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.hero-icon {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border-radius: 25px;
+
+    font-size: 48px;
+
+    margin-bottom: 40px;
+}
+
+.hero-card h2 {
+    text-align: left;
+
+    font-size: 42px;
+
+    margin-bottom: 12px;
+
+    color: white;
+}
+
+.hero-subtitle {
+    font-size: 22px;
+
+    color: #e4efff;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= INFO ================= */
+
+.hero-info {
+    width: 100%;
+}
+
+.info-row {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 5px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.2);
+
+    font-size: 19px;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-row span {
+    color: white;
+}
+
+.info-row strong {
     color: white;
 
-    background: rgba(0, 0, 0, 0.55);
+    font-size: 20px;
 
-    padding: 12px 22px;
-    border-radius: 12px;
-
-    max-width: 650px;
-    margin: 0 auto 30px;
-
-    backdrop-filter: blur(5px);
-
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    text-align: right;
 }
 
 
@@ -310,11 +465,72 @@ footer p {
         justify-content: center;
     }
 
-    .hero {
-        min-height: 80vh;
+.hero {
+    min-height: calc(100vh - 70px);
 
-        padding: 30px 15px;
-    }
+    padding: 50px 20px;
+}
+
+.hero-content {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+}
+
+.hero-text h1 {
+    font-size: 65px;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 30px;
+}
+
+.hero-text > p {
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+.hero-card {
+    padding: 30px 25px;
+
+    border-radius: 28px;
+}
+
+.hero-icon {
+    width: 80px;
+    height: 80px;
+
+    font-size: 38px;
+
+    margin-bottom: 25px;
+}
+
+.hero-card h2 {
+    font-size: 32px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+}
+
+.info-row {
+    font-size: 15px;
+
+    padding: 19px 2px;
+}
+
+.info-row strong {
+    font-size: 16px;
+}
+
+.button {
+    font-size: 17px;
+
+    padding: 15px 23px;
+}
 
     .hero h1 {
         font-size: 35px;

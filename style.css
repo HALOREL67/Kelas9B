@@ -348,6 +348,5 @@ footer p {
 
 header.minimized {
     transform: translateY(-90%);
-    opacity: 0.15;
 }
 }

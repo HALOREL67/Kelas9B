@@ -49,12 +49,29 @@ nav h2 {
 
 .hero {
     min-height: 90vh;
+
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
-    padding: 30px;
+
+    padding: 40px 20px;
+
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("assets/foto-bareng.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
 }
 
 .hero h1 {

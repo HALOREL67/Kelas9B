@@ -361,6 +361,6 @@ footer p {
     }
 
     header.minimized {
-        transform: translateY(-100%);
+        transform: translateY(-110%);
     }
 }

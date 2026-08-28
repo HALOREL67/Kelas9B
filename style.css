@@ -183,4 +183,18 @@ footer {
         flex-direction: column;
         gap: 15px;
     }
+    .structure-image {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.structure-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
 }

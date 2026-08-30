@@ -587,10 +587,7 @@ section h2 {
 
     letter-spacing: 1px;
 
-    color: #e5efff;
-
-    text-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.5);
+    color: #000000;
 }
 
 
@@ -601,9 +598,9 @@ section h2 {
 
     padding: 16px 25px;
 
-    background: rgba(255, 255, 255, 0.95);F
+    background: rgba(255, 255, 255, 0.95);
 
-    color: #102a48;
+    color: #000000;
 
     border-radius: 14px;
 
@@ -617,13 +614,6 @@ section h2 {
         0 8px 25px rgba(0, 0, 0, 0.3);
 
     transition: 0.25s ease;
-}
-
-.person-box:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
 

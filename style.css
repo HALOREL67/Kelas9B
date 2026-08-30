@@ -592,15 +592,16 @@ section h2 {
 
 
 /* ================= KOTAK NAMA ================= */
-
 .person-box {
     min-width: 250px;
 
     padding: 16px 25px;
 
-    background: rgba(255, 255, 255, 0.95);
+    background: #000000;
 
-    color: #000000;
+    color: #ffffff !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
 
     border-radius: 14px;
 
@@ -611,9 +612,18 @@ section h2 {
     font-weight: bold;
 
     box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.3);
+        0 8px 25px rgba(0, 0, 0, 0.4);
 
     transition: 0.25s ease;
+}
+
+.person-box:hover {
+    transform: translateY(-3px);
+
+    background: #111111;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.5);
 }
 
 

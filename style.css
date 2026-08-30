@@ -889,6 +889,20 @@ footer {
     }
 }
 
+/* ================= WARNA TEKS STRUKTUR ================= */
+
+.structure-section .position-title {
+    color: #000000 !important;
+}
+
+.structure-section .person-box {
+    color: #000000 !important;
+}
+
+.structure-section .person-box strong {
+    color: #000000 !important;
+}
+
 
 /* ================================================= */
 /* ===================== MOBILE ==================== */

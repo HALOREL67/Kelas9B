@@ -576,7 +576,9 @@ section h2 {
 
 /* ================= JUDUL POSISI ================= */
 
-.position-title {
+/* JABATAN = PUTIH */
+
+.structure-section .position-title {
     margin-bottom: 10px;
 
     text-align: center;
@@ -587,19 +589,23 @@ section h2 {
 
     letter-spacing: 1px;
 
-    color: #e5efff;
+    color: #ffffff !important;
 }
 
 
 /* ================= KOTAK NAMA ================= */
-.person-box {
+
+/* KOTAK = PUTIH */
+/* NAMA = HITAM */
+
+.structure-section .person-box {
     min-width: 250px;
 
     padding: 16px 25px;
 
     background: rgba(255, 255, 255, 0.95);
 
-    color: #102a48;
+    color: #000000 !important;
 
     border-radius: 14px;
 
@@ -615,6 +621,14 @@ section h2 {
     transition: 0.25s ease;
 }
 
+.structure-section .person-box:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+
 /* ================= WALI KELAS ================= */
 
 .structure-top {
@@ -628,7 +642,7 @@ section h2 {
 }
 
 
-/* garis bawah wali kelas */
+/* GARIS BAWAH WALI KELAS */
 
 .structure-top::after {
     content: "";
@@ -666,7 +680,7 @@ section h2 {
 }
 
 
-/* garis horizontal ketua-wakil */
+/* GARIS HORIZONTAL KETUA-WAKIL */
 
 .structure-leaders::before {
     content: "";
@@ -704,7 +718,7 @@ section h2 {
 }
 
 
-/* garis pengurus */
+/* GARIS PENGURUS */
 
 .structure-roles::before {
     content: "";
@@ -816,7 +830,7 @@ footer {
 }
 
 
-/* Logo / judul footer */
+/* LOGO / JUDUL FOOTER */
 
 .footer-content h2 {
     margin-bottom: 10px;
@@ -831,7 +845,7 @@ footer {
 }
 
 
-/* Text footer */
+/* TEXT FOOTER */
 
 .footer-content p {
     margin-top: 8px;
@@ -840,7 +854,7 @@ footer {
 }
 
 
-/* Link Instagram */
+/* LINK INSTAGRAM */
 
 .footer-content a {
     color: #94a3b8;
@@ -857,7 +871,7 @@ footer {
 }
 
 
-/* Copyright */
+/* COPYRIGHT */
 
 .copyright {
     font-size: 13px;
@@ -885,20 +899,6 @@ footer {
     .structure-leaders {
         gap: 60px;
     }
-}
-
-/* ================= WARNA TEKS STRUKTUR ================= */
-
-.structure-section .position-title {
-    color: #000000 !important;
-}
-
-.structure-section .person-box {
-    color: #000000 !important;
-}
-
-.structure-section .person-box strong {
-    color: #000000 !important;
 }
 
 
@@ -1077,9 +1077,7 @@ footer {
     }
 
 
-    /* ================================================= */
-    /* ================= STRUKTUR MOBILE =============== */
-    /* ================================================= */
+    /* ---------- STRUKTUR ---------- */
 
     .structure-section {
         padding: 60px 15px;

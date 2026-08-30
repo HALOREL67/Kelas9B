@@ -587,7 +587,7 @@ section h2 {
 
     letter-spacing: 1px;
 
-    color: #000000;
+    color: #e5efff;
 }
 
 
@@ -597,11 +597,9 @@ section h2 {
 
     padding: 16px 25px;
 
-    background: #000000;
+    background: rgba(255, 255, 255, 0.95);
 
-    color: #ffffff !important;
-
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #102a48;
 
     border-radius: 14px;
 
@@ -612,20 +610,10 @@ section h2 {
     font-weight: bold;
 
     box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.4);
+        0 8px 25px rgba(0, 0, 0, 0.3);
 
     transition: 0.25s ease;
 }
-
-.person-box:hover {
-    transform: translateY(-3px);
-
-    background: #111111;
-
-    box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.5);
-}
-
 
 /* ================= WALI KELAS ================= */
 
